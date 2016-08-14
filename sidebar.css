@@ -46,15 +46,14 @@ li a:hover:not(.active) {
 .nav li:not(.sub2) {
 	padding: 8px 5px 8px 5px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: #22ACE2;
 	font-size 25px;
 	color: white;
-	display: block;
-	transition 0.3s;
 }
 
 .nav ul .sub2 {
 	font-size: 10px;
+	margin-left: 2em;
 }
 
 .nav li .header {
@@ -66,7 +65,9 @@ body {
 }
 
 #main {
-	font-size: 8px;
-	margin-left = 25%;
+	font-size: 16px;
+	margin-left : 25%;
+
 	padding:1px 16px;
 }
+
