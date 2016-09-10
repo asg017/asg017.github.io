@@ -2,7 +2,13 @@
 <html>
 
 <head>
-	<title> TritonFind FAQ's</title>
+	<meta name="keywords" content="TritonFind, UCSD, lost and found, Messenger Bot, Frequently Asked Questions, FAQ">
+	<meta name="descriptions" content="TritonFind Messenger Bot Frequently Asked Questions">
+	<meta name="author" content="Alexander Garcia">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="main.css">	
+	<link rel="stylesheet" type="text/css" href="FAQ.css">	
+	<title> FAQ's | TritonFind | Alex Garcia</title>
 </head>
 
 <body>
@@ -11,13 +17,14 @@
 
 	<h1>TritonFind Frequently Asked Questions</h1>
 	<p id="title-subtext">Was TritonFind's instructions not helpful enough? See if any of these help out! </p>
+	<hr>
 	
 	<div class="q-and-a">
 		
-		<div class="general">
+		<div class= "qa-category" id="general">
 			<h3> General Questions </h3>
-			<p class="question"> How do you work? </p>
-			<p class="answer"> Okay, this is how it generally goes down. 
+			<p class="question"> How does TritonFind work? </p>
+			<p class="answer"> This is how it generally goes down. 
 				<ol> 
 					<li>You register an item through TritonFind by sending 
 					the bot a picture of the item's barcode 
@@ -27,25 +34,34 @@
 					TritonFind recognizes it as yours, and connects you two 
 					through Messenger. </li>
 					<li>You two talk it out, and find out how to return your item.
-					(see our list of reccommended ways of doing this).</li>
+					(see our list of recommended ways of doing this).</li>
 					<li>Your item is returned and your day is saved! </li>
 				</ol>
 			</p>
 			
 			<p class="question">Isn't this useless if noone uses it?</p>
 			<p class="answer"> Yes, it is. Which is why it is imperative that 
-			sign up for it. <br> Think about it - It takes only about 30 seconds
+			sign up for it. <br> It takes only 30 seconds
 			to register your student ID or items with TritionFind. After that, 
 			you can ignore it forever. But there may be a time in the future 
 			where you desperately need to find your item: maybe Sun God is 
-			tomorrow and you need your ID, or you're locked out of your room, 
+			tomorrow, or you're locked out of your room, 
 			or you're scared someone is stealing your dining dollars. 
 			<br> TritonFind will give your mind ease. Sure, you may never use it,
 			but when you absolutely <u>need</u> it, it will be there.
 			</p>
 
+			<p class="question">If I lost my UC San Diego ID that was registered with 
+			TritonFind, and then obtained a new ID, must I re-register the new 
+			ID with TritonFind?</p>
+			<p class="answer">Yes, you do. Every new ID printed has a new barcode
+			on the back (but keeps the same PID). TritonFind will not know about
+			your new ID until you register it again. You may delete your old ID
+			from TritonFind by sending the bot "View my items", then choosing
+			"Delete Item" on your old ID. </p>
+
 		</div>
-		<div class="troubleshooting">
+		<div class="qa-category" id="troubleshooting">
 			<h3>TroubleShooting</h3>
 			<p class="question"> How come it's not recognizing my barcode? </p>
 			<p class="answer"> In order for TritonFind to find a barcode in 
@@ -83,10 +99,16 @@
 					Diego studnet ID's, TritonFind prefers CODABAR barcodes. If
 					you wish to scan something other than a UC San Diego ID, 
 					all you have to do is confirm that you are <u>not</u> scanning
-					a UC San Diego ID when taking a picture.</p>
+					a UC SanDiego ID when taking a picture.</p>
 					</p>
+				<p class="question">How come the bot is not responding back
+				anymore? </p>
+				<p class="answer">That is not supposed to happen. Please 
+				<a href="contact.html">contact me</a> ASAP so I can fix it. If
+				its a systemwide failure, and you are the one that notfies me,
+				I'll buy you dinner,. </p>
 		</div>
-		<div class="data-security">
+		<div class="qa-category" id="data-security">
 			<h3>Security/Data Protection</h3>
 			<p class="question"> How do I know you won't steal my UCSD PID? </p>
 			<p class="answer"> The barcode on the back of a UCSD ID does not 
@@ -94,13 +116,14 @@
 			that UCSD keeps to connect those, but TritonFind does not have
 			the ability to do that. <br>We also reccomend that you take a look
 			at the <a href="privacy.html">TritonFind Privacy Policy</a>. We 
-			detail exactly how we deal with your potentially secret information.</p>
+			detail exactly how we handle your potentially private information.</p>
 		</div>
-		<div class="Commands">
-			<p class="question"> This is a question? </p>
+		<div class="qa-category" id="Commands">
+			<p class="question"> What commands can I give TritonFind in Messenger? </p>
 			<p class="answer"> This is an answer! </p>
 		</div>
-		<div class="how-made">
+
+		<div class = "qa-category" id="how-made">
 			<h3>About TritionFind</h3>
 			<p class="question"> Who made this? </p>
 			<p class="answer"> Hi, my name is Alex Garcia! I'm a Computer 

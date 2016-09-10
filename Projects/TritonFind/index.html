@@ -9,62 +9,20 @@
 	<meta name="author" content="Alexander Garcia">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
 	<title> TritonFind | Messenger Bot | Alex Garcia </title>
-
-	<script src="index.js">  </script>
-	<script> 
-	function hi() { 
-		alert('Hi');
-	}
-	function showMetrics() {
-		alert("starting shw metrics");
-		getMetrics( function test(err, data) {
-			if(err) {
-				console.log("whoops");
-			}
-			else {
-			var metrics = JSON.parse(data);
-
-			var metricSentence = 'TritonFind has ' + metrics.num_users + 
-								' users, ' + metrics.num_items + ' items registered, ' + 
-								'and has recovered ' + metrics.num_returned + 
-								'items back to their owners.';
-
-				document.getElementById('metrics').textContent = metricSentence;
-			
-		}
-		});
-}
-
-function getMetrics(callback) {
-	
-	var xmlHttp = new XMLHttpRequest();
-
-	xmlHttp.onreadystatechange = function() {
-		if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
-			callback(null, xmlHttp.responseText);
-		else
-			callback(true);
-	};
-
-	xmlHttp.open('GET', 'https://triton-find.herokuapp.com/metrics', true);
-	xmlHttp.setRequestHeader('Content-Type', 'text/plain');
-	xmlHttp.send();
-}</script>
-
 </head>
 
-<body onload="showMetrics();">
+<body>
 	
 	<div class="main">
 
 	<h1>Meet TritonFind.</h1>
 
-	<button type="button" onclick="hi()" class="button" > </button>
 	<p id="subtext">He helps you find your lost items. </p>
 	<p id="metrics"> ... </p>
 	
-	<button class="button">Get Started</button>
+	<a class="button">Get Started</a>
 
 
 
