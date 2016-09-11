@@ -51,3 +51,23 @@ a:hover {
 	font-size: 32px;
 	cursor: pointer;
 }
+
+.container {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	left: 72px;
+	top: 54px;
+}
+
+.intro-left {
+	position: absolute;
+	left:50px;
+}
+
+.intro-right {
+	position: absolute;
+	left: 50%;
+}
