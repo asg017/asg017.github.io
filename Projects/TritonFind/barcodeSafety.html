@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<html>
+
+<head>
+	<meta name="keywords" content="TritonFind, UCSD, data, privacy, safety">
+	<meta name="descriptions" content="TritonFind Data Protection">
+	<meta name="author" content="Alexander Garcia">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<title> Barcode Safety | TritonFind | Alex Garcia</title>
+
+</head>
+
+<body>
+
+<div class="main">
+<h1>Why should I trust you with my information?</h1>
+<p id="subtitle">The TritonFind team understands if you are weary of TritonFind's
+	data collection. In addition to our <a href="privacy.html">Privacy Policy</a>,
+	here are the additional steps we (and you) can take to keep your info private.</p>
+
+<div id="TLDR">
+<p>Too Long, Didn't Read: </p>
+<ol>
+	<li>TritonFind information is kept in a secure database.</li>
+	<li>TritonFind takes extra steps to keep your info safe in case of data breaches.</li>
+	<li>There are <a href="#whatcan-i-do">extra steps</a> you can take to 
+	     secure your data even more.</li>
+	<li>In general, you should be more worried about UCSD security than TritonFind's.</li>
+</ol>
+</div>
+
+<div id="barcode-info">
+<h2>What does the barcode on the back of my UCSD ID even do?</h2>
+
+<p>First clarification, the barcode on the back of your ID does <u>NOT</u> 
+	correspond your PID.</p>
+
+<p>Your PID starts with a letter (usually "A"), and grants you access to most your 
+	UCSD accounts and services.</p>
+
+<p>The barcode on the back of your ID is all numbers (starts with "21822...") 
+	and helps you access some services from UCSD. It is completely unique to your
+	current physical ID (if you lose your ID, your new ID would have a new barcode number).</p>
+
+
+<p>Second, here is a list that TritonFind has created on all the possible uses 
+	for the barcode on the back of your ID:</p>
+
+	<ol>
+		<li>Register for Sun God (
+			<a href="https://signedevents.com/united-states/la-jolla/sun-god-festival-2016/">
+			archived link</a>)</li>
+		<li>Access your <a href="https://roger.ucsd.edu/patroninfo">UCSD Library Account</a></li>
+		<li><a href="http://libraries.ucsd.edu/spaces/reserve/">
+			Reserve a group study room</a> at the library</li>
+		<li><a href="http://libraries.ucsd.edu/services/requesting/request-for-book-or-journal-article.html">
+		Access other</a> <a href="http://www.cdlib.org/services/d2d/ill/myill/">miscellaneous library services</a></li>
+	</ol>
+
+<p>Most of these services require you provide other forms of identification to utilize. 
+	For example, Sun God registration require PID and full name, Library Accounts
+	require a PIN (if it is registered), and group study rooms require a valid @ucsd.edu email.</p>
+
+<p>Some services, however, only require the barcode. Which is why TritonFind takes
+	some extra steps to keep your code safe.</p>
+
+</div>
+
+<div id="tritonfind-safety">
+<h2>How does TritonFind keep my barcode safe?</h2>
+
+<p>TritonFind has to store barcode information in a database, in order to provide
+	the unique services that it performs.</p>
+
+<p>TritonFind "salts and hashes" barcode information. So, even if your
+	barcode is "218230596789123", it may appear on TritonFind's database as: </p>
+
+	<p align="center">"0e48dad2000ba9b8ca4483e9e7a28d36a88ae890712f2bd0c80d3bee89b47969"</p>
+
+<p>This is done for two reasons:</p>
+	<ol>
+		<li>To prevent the TritonFind team from accidentally viewing users' barcode data.</li>
+		<li>To impede hacker's attempts from harming our users.</li>
+	</ol>
+<p>This process is a hash and salt approach. It's similar to how many companies and 
+	businesses protect their users' passwords.</p>
+</div>
+
+<div id="100-percent">
+<h2>Is TritonFind 100% secure?</h2>
+
+<p>For TritonFind's purpose, it is secure enough.</p>
+
+<p>This is what would have to go wrong in order for TritonFind's security to be
+	compromised:</p>
+
+	<ol>
+		<li>An intruder gains access to the server that TritonFind is ran on.</li> 
+		<li>They then break into and steal information from TritonFind's database.</li>
+		<li>Then, they spend a ton of resources into reversing the hashing/salting
+			algorithms, or attempt a brute-force algorithm to decode the hash.</li>
+		<li>Finally, they <u>might</u> have some form of usable data from only some users.</li>
+	</ol>
+	<br>
+	<p>Then, what could a hacker use with this data?
+		<br><br>Not much, really. Since they lack other information about you (full names,
+		PID, passwords, etc), they can't access services that the barcode provides.
+		<br>They could, however, gain unauthorized access some UCSD services. Go
+		<a href="#what-can-i-do">here</a> to see how you can protect yourself in
+		case of a breach such as this. Also, TritonFind will attempt to contact
+		and give any form of aid to users if an event like that happens.
+	</p>
+
+	<p><br>But what would be an easier option for a hacker who wants to cause harm?</p>
+	<p>Well, maybe they could simply brute force the 
+	<a href="https://ucill.vdxhost.com/zportal/zengine?VDXaction=LoginPage">
+	UC Systemwide Library ILL service</a>, since no PIN is required (even 
+	though other colleges, like UC Davis and UC Santa Barbara, require PIN's),
+	a python script could easily break into and scrape student's personal information 
+	(like email address and home address).
+	This would certainly be easier than breaking into TritonFind's system, would 
+	cause more damage, and quite less complex.</p>
+</div>
+
+<div id="committment">
+	<p>But make no doubt, even though there might be bigger and easier targets out than TritonFind, the 
+		TritonFind team is still very, very committed to keeping our service safe
+		and secure. Our team strives to keep TritonFind's security measures
+		one step ahead, and always keeps the best interests of our users.</p>
+</div>
+
+
+<div id="what-can-i-do">
+	<h2>What can I do to keep my and my peers' information safe?</h2>
+	
+	<ol>
+		
+		<li>You can make your <a href="https://roger.ucsd.edu/patroninfo">
+		UCSD Library Account</a>, to attach a PIN to that account, which would
+		prevent other people from using your library resources.</li>
+		<li>
+		<li>Every few months, you can <a href="https://acms.ucsd.edu/students/gpasswd.html">
+		reset your UCSD password</a>. Remember, never use any regular day-to-day
+		words in a password, or names of people close to you.</li>
+		<li>You could <a href="http://libraries.ucsd.edu/contacts/administrative-contacts.html">
+		contact library admin</a> if you are worried about their potential 
+		security vulnerabilities.</li>
+		<li>Check out the <a href="https://www.github.com/asg017/TritonFind">
+		TritonFind source code on Github</a>. Find any security vulnerabilities,
+		make recommendations as to how to make TritonFind more secure and better.</li>
+	</ol>
+
+	<h2>Do you really expect me to do all of this just to use TritonFind?</h2>
+	<p>No, of course not. You do not need to do any of these extra security steps to 
+		use TritonFind. But, in the case of a data leak, either from TritonFind
+		or from any other place at UCSD, a peaceful mind always trumps a frantic one.</p>
+	
+	<h2>I still don't trust you.</h2>
+	<p> <a href="contact.html">Hit me up.</a> We can grab some lunch, you can 
+		get to know me and my team. You can learn why I decided to make this,
+		how I make sure everyone's info is safe. I want to make sure that all
+		TritonFind users feel safe and secure, so I'll do whatever it takes to
+		make sure your TritonFind experience is worth it.</p>
+</div>
+</div>
+</body>
+
+
+</html>
