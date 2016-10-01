@@ -1,13 +1,51 @@
 <html>
 
 <head>
+<title>My Title</title>
 
-<title>This is the title! woah</title>
+<script>
+function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'Messenger'));
+
+
+  window.extAsyncInit = function() {
+    // the Messenger Extensions JS SDK is done loading 
+  };
+  
+  
+  
+ function getUserId() {
+	MessengerExtensions.getUserID(function success(uids) {
+	var psid = uids.psid;
+	alert(psid);
+	
+	}, function error(err) {      
+	
+	});   
+}
+
+function closeWindow() {
+  MessengerExtensions.requestCloseBrowser(function success() {
+
+  }, function error(err) {
+
+  }); 
+ }
+ 
+</script>
+
 
 </head>
 
+
 <body>
-<p>This is working!!!</p>
+<button onclick="getUserId()">Woah</button>
+<button onclick="closeWindow()">Yay</button>
 
 </body>
 
