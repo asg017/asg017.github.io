@@ -1,40 +1,287 @@
-<!DOCTYPE HTML>
-<html lang="en">
 
 <html>
 
-	<head>
-	<title>Alex Garica | UCSD 2019</title>
-
-	<link rel="stylesheet" type"text/css" href="sidebar.css">
-	</head>
-	<body>
-	
-	<div class="nav">
-		
-		<ul>
-
-		<li> <a class="header"> Alex Garcia <br> <span class="sub"> UC San Diego - Class of 2019 </span> </a> </li>
-		<li> <a class="active" href="Home">Home</a> </li>
-		<li> <a href="Resume">Resume</a> </li>
-		<li> <a href="Contact">Contacts</a> </li>
-		<li> <a href="Projects">Projects</a> </li>
-			<ul class="sub2">
-				<li class="sub2">  <a href="Projects/GetFour/Welcome.html">-GetFour</a> </li>
-				<li class="sub2">  <a href="Projects/TritonFind/index.html">-TritonFind</a> </li>
-			</ul>
-		<li> <a href="Blog">Blog</a> </li>
-
-		</ul>
-
-	</div>
-
-	<div id="main">
-		<p> Caution: I am not a web developer. But I did spend a few hours on w3Schools, so I like to think I know everything.</p>
-		<p> Eventually I'll add stuff here </p>
-	</div>
+  <head>
+    <title>Alex Garcia</title>
+    <meta charset="UTF-8">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
 
 
-	</body>
+    <!--Semantic UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+    <!--Slick (carousels) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js" integrity="sha256-Bccy5g19sAkVrles3ZHA4T4iPhNY9+1le3UL6cbTpao=" crossorigin="anonymous"></script>
+
+    <!-- Mustache.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" integrity="sha256-iaqfO5ue0VbSGcEiQn+OeXxnxAMK2+QgHXIDA5bWtGI=" crossorigin="anonymous"></script>
+
+    </script>
+
+    <style>
+      .slick-slide {
+        height:auto;
+        padding: 0 30px;
+      }
+
+      .slick-prev:before, 
+      .slick-next:before {
+        color: black;    
+        z-index: 100000,
+      }
+    </style>
+
+    <script id="template-side-projects" type="text/template">
+      <div style="width:100%">
+        <div class="ui card">
+          <div class="image">
+            <img src="{{ image }}"/>
+          </div>
+          <div class="content">
+            <div class="header">
+              {{ title }} 
+              {{#github}} 
+                <a href="{{ github }}"><i class="ui right floated large black github icon"></i></a>
+              {{/github}}
+            </div>
+
+            <div class="meta">
+              <span class="date">{{ date }}</span>
+            </div>
+            <div class="description">
+              {{ description }}
+            </div>
+            <div class="extra">
+              {{#labels}}
+              <div class="ui compact label">{{ name }}</div>
+              {{/labels}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script id="template-work-experience" type="text/template">
+      <div class="item">
+        <div class="content">
+
+          <div class="ui grid">
+            <div class="five wide column">
+              <h4 class="ui header">
+                <i class="ui {{ icon }} icon"></i>
+                {{ company }} 
+              </h4>
+            </div>
+            <div class="five wide column">
+              <div style="text-align:center" class="description">{{ position }}</div>
+            </div>
+            <div class="five wide column">
+              {{#dates}}
+              <span class="right floated">{{ start }}-{{ end }}</span><br>
+              {{/dates}}
+            </div>
+          </div>
+      </div>
+    </script>
+    <script>
+      $(document).ready( function() {
+
+        var works = [
+        {
+          icon:'cloud',
+          company: 'Salesforce',
+          position: 'Software Engineering Intern',
+          dates: [
+          {'start':'June 2017', 'end':'September 2017'},
+          ],
+        },
+        {
+          icon:'university',
+          company: 'UC San Diego Admissions',
+          position: 'College Ambassador',
+          dates: [
+          {'start':'January 2017', 'end':'Present'},
+          ],
+        },
+        {
+          icon:'money',
+          company: 'UC San Diego Student Life',
+          position: 'Financial Assistant',
+          dates: [
+          {'start':'October 2015', 'end':'June 2017'},
+          ],
+        },
+        {
+          icon:'suitcase',
+          company: 'Employers Group',
+          position: 'Research and Surveys Intern',
+          dates: [
+          {'start':'July 2015', 'end':'September 2015'},
+          {'start':'August 2016', 'end':'September 2016'},
+          ],
+        },
+        ];
+        var projects = [
+        {
+          image: 'http://via.placeholder.com/400x300',
+          github: 'https://www.github.com/asg017/TritonFind',
+          title: 'TritonFind',
+          date: 'Summer \'16',
+          description: 'Messenger Bot for UC San Diego students to find their lost ID\'s.',
+          labels: [
+          { name: 'node'},
+          { name: 'mysql'},
+          { name: 'messenger'},
+          ],
+        },
+        {
+          image: 'http://via.placeholder.com/400x300',
+          github: '',
+          title: 'TritonPal',
+          date: 'December \'16 - March \'17',
+          description: 'Chrome Extension to covert USCD WebReg schedule into Google Calendar.',
+          labels: [
+          { name: 'node'},
+          { name: 'html'},
+          { name: 'css'},
+          { name: 'js'},
+          ],
+        },
+
+        {
+          image: 'http://via.placeholder.com/400x300',
+          github: '',
+          title: 'Four-in-a-Row',
+          date: 'Summer \'16',
+          description: 'Messenger Bot to play Connect Four with friends, using emojis.',
+          labels: [
+          { name: 'node'},
+          { name: 'mysql'},
+          { name: 'messenger'},
+          ],
+        },
+        {
+          image: 'http://via.placeholder.com/400x300',
+          github: '',
+          title: 'Four-in-a-Row',
+          date: 'Summer \'16',
+          description: 'Messenger Bot to play Connect Four with friends, using emojis.',
+          labels: [
+          { name: 'node'},
+          { name: 'mysql'},
+          { name: 'messenger'},
+          ],
+        },
+        ];
+        //insert work experience
+
+        var workTemplate = $('#template-work-experience').html();
+        for(var i = 0; i < works.length; i++) {
+          var html = Mustache.render(workTemplate, works[i]);
+          $('#work-container').append(html);
+        }
+
+        var projectsTemplate = $('#template-side-projects').html();
+        for(var i = 0; i < projects.length; i++) {
+          var html = Mustache.render(projectsTemplate, projects[i]);
+          $('#projects-container').append(html);
+        }
+
+        //create carousel
+
+        $('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots:true,
+          prevArrow: '<button  type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button style="z-index:9999" type="button" class="slick-next">Next</button>',
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="ui menu">
+    </div>
+
+    <div class="ui stackable grid">
+
+      <div class="row">
+        <div class="three wide column"></div>
+        <div class="ten wide column">
+          <div class="ui unstackable items">
+            <div class="item">
+              <div class="image">
+                <img src="https://avatars3.githubusercontent.com/u/15178711?v=4&s=460">
+              </div>
+              <div class="content">
+                <h1>Alex Garcia</h1>
+                <div class="meta">
+                  <span>UC San Diego 2019, Computer Engineering Major</span><br>
+                  <span>Los Angeles, CA</span>
+                </div>
+
+
+                <div class="extra">
+                  <div class="ui label">Web Dev</div>
+                  <div class="ui label">Full Stack</div>
+                  <div class="ui label">Databases</div>
+                </div>
+              </div>
+            </div>
+            <div class="ui divider"></div>
+            <div class="item">
+              <div class="content">
+
+                <h2 class="ui header">Work Experience</h2>
+                <div id="work-container" style="margin:15px" class="ui items">
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="ui divider"></div>
+            <div class="item">
+              <div class="content" style="width:100%">
+                <h2 class="ui header">Side Projects</h2><br><br>
+                <div id="projects-container" style="margin:15px; width:100%;"class="slider multiple-items">
+                </div>
+              </div>
+            </div>
+            <div class="ui divider"></div>
+
+          </div>
+        </div>
+        <div class="two wide column">
+
+          <div class="ui vertical icon menu">
+            <a href="https://www.twitter.com/asg_027" class="ui item">
+              <i class="ui big twitter square black icon"></i>
+            </a>
+            <a href="https://www.github.com/asg017" class="ui item">
+              <i class="ui big github square black icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alexander-garcia-901084100/" class="ui item">
+              <i class="ui big linkedin square black icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div style="margin-top:15px;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: #111;text-align: center;">
+      <span style="color:white">Made with Github Pages</span>
+    </div>
+
+  </body>
 
 </html>
