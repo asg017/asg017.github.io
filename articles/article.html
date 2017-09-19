@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!--
+    <script src="prettyNames.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js" integrity="sha256-Bhi6GMQ/72uYZcJXCJ2LToOIcN3+Cx47AZnq/Bw1f7A=" crossorigin="anonymous"></script>
+    
+    
+    -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/grid.min.css"/>
+    
+    <link rel="stylesheet" href="article.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/accordion.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" integrity="sha256-iaqfO5ue0VbSGcEiQn+OeXxnxAMK2+QgHXIDA5bWtGI=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.0.0/d3-annotation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollstory@1.0.0/jquery.scrollstory.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.1.0/anime.min.js"></script>
+    <script src="article.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/accordion.min.css" />
+<style>
+
+</style>
+</head>
+
+<body>
+
+  <h1>College, Major, and Gender at UC San Diego</h1>
+  <span>Analyzing how different academic identities intersect at UCSD in La Jolla.</span>
+  
+  <div id="scroll-main-container">
+    
+    <div id="intro" class="story scroll-section">
+      <p>At the end of Week 3 of each academic quarter at UCSD, the Registrar's office puts out their "Final Registration Reports," giving insight to the makeup of the UC San Diego student population.</p>
+    
+      <p>The most insightful report in this giant list of reports is called REGCAM05, which shows how many students are in each major, department, and college, as well as their gender and their school year.</p>
+    </div>
+    
+    <div id="" class="story scroll-section">
+      
+      <div class="ui fluid accordion">
+        <div class="title">
+          <h2>Data Collection</h2>
+        </div>
+        <div class="active content">
+          <div class="ui grid">
+              
+              <div class="seven wide column">
+                
+                  <div id="data-descrip-scroll-container">
+                  
+                    <div id="data-descrip-intro" class="step text-scroll-div">
+                      <p>The data used in this essay was scraped from publically available PDF's found <a>here</a>. The available data comes from all the way back in Fall 2003 up instll Spring 2017.</p>
+                    </div>
+                    
+                    <div id="data-descrip-notsame" class="step text-scroll-div">
+                      <p>All the PDF's were not structured the same, however. There were 4 different types of PDF's I found while building a scraper.</p>
+                    </div>
+                    
+                    <div id="data-descrip-section1" class="step text-scroll-div">
+                      <p>The first section: <b>Fall 2003 - Winter 2007</b>. These files are pretty old, department names are slightly different, so I choose not to scrape these files (for now).</p>
+                    </div>
+                    
+                    <div id="data-descrip-section2" class="step text-scroll-div">
+                      <p>The second section: <b>Spring 2007 - Winter 2015</b>. These were scraped and included in this essay.</p>
+                    </div>
+                    
+                    <div id="data-descrip-section3" class="step text-scroll-div">
+                      <p>The next, <b>Spring 2015-Spring 2016</b>. Looks the same as the 2nd batch, but data was exported slightly different (I suspect a new Microsoft Excel version in the registrar's offce). These were also scraped and included.</p>
+                    </div>
+                    
+                    <div id="data-descrip-section4" class="step text-scroll-div">
+                      <p>The last, and most recent, <b>Fall 2016-Spring 2017</b>. These reports did not include any gender data, and looks a lot different than previous reports (seems like it's exported from some website). These reports were NOT scraped and not included in this essay.</p>
+                    </div>
+                    <div id="data-descrip-conclude" class="step text-scroll-div">
+                      <p>So, that leaves us with pure, uniform data from Spring 2007 - Spring 2016, 9 years and 28 quarters worth of student registration data.</p>
+                    </div>
+                    <div id="data-descrip-end" class="step data-descip-scroll">
+                      
+                    </div>
+                  
+                  </div>
+              </div>
+              
+              <div id="svg-data-descrip-outer" class="seven wide column">
+                  <div id="svg-data-descrip">
+                    
+                  </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        
+      </div>
+            
+      
+      
+      
+    </div>
+  
+    <div id="identities" class="story scroll-section">
+      <div class="ui fluid accordion">
+        <div class="title">
+          <h2>"Academic Identities"</h2>
+        </div>
+        <div class="active content">
+          <div class="ui grid">
+        <div class="seven wide column">
+        
+          <div id="academic-ident-scroll-container">
+            
+            <div class="step text-scroll-div">
+              With the REGCAM05 report, we get 5 distinct academic identites to analyze: <b>Year</b>, <b>Gender</b>, <b>College</b>, <b>Department</b>, and <b>Major</b>.
+            </div>
+            <div class="step text-scroll-div">
+              First: <b>Year</b>. Now, UCSD defines a student's "year" based on how many units they complete, wtih 36 units per year. So, Freshmen have completed between 0-35 academic units, Sophomores 36-71, and so on.<br/>
+              However, this doesn't coorespond to how many years a student has been at UCSD. Incoming first year freshmen (or transfers) with a lot of AP/IB credit or community college classes under their belt may have more than 36 units before they step foot on campus.
+              Also, not all students do 36 units per year. Some students do 20+ units per quarter, some students may take a quarter off, others might do summer classes. For example, I've only done two years at UCSD, but I have "Senior" academic standing, and I'm probably going to take 3 more years to graduate (meaning I'll be a "Senior" for three years).
+            </div>
+            <div class="step text-scroll-div">
+              Next, <b>Gender</b>. One thing to note, UCSD only reports "Male" or "Female", and does not report any other gender identities.
+            </div>
+            <div class="step text-scroll-div">
+              Then, <b>College.</b>. UC San Diego operates on a six-college system. I won't go too in depth with this, but a student's college is not based on their major or department, it is (ideally) independent from that.
+            </div>
+            
+            <div class="step text-scroll-div">
+              Finally, <b>Department</b> and <b>Major</b>. Just a small note, the data in this essay does not include double or triple majors (or minors, for that manner).
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="seven wide column">
+          
+        </div>
+      </div>
+        
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div id="endpadding" style="height:1000px;width:100%;">
+    
+  </div>
+</body>
+
+</html>
