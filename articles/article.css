@@ -38,20 +38,21 @@
 	  bottom: 0;
 	  position: absolute;
   }
-  
-  #svg-data-descrip svg {
+  .scroll-svg-inner svg {
+  /*#svg-data-descrip svg {*/
     top: 50%;
 	  position: relative;
   }
   
-  #svg-data-descrip {
+  .scroll-svg-inner {
+  /*#svg-data-descrip {*/
   	-webkit-transform: translate3d(0, 0, 0);
   	-moz-transform: translate3d(0, 0, 0);
   	transform: translate3d(0, 0, 0);
   	width: 100%;
   }
-  
-  #svg-data-descrip-outer {
+  .scroll-svg-outer {
+  /*#svg-data-descrip-outer {*/
     position:relative;
   }
 

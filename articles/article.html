@@ -45,7 +45,7 @@
       <p>The most insightful report in this giant list of reports is called REGCAM05, which shows how many students are in each major, department, and college, as well as their gender and their school year.</p>
     </div>
     
-    <div id="" class="story scroll-section">
+    <div id="data" class="story scroll-section">
       
       <div class="ui fluid accordion">
         <div class="title">
@@ -91,8 +91,8 @@
                   </div>
               </div>
               
-              <div id="svg-data-descrip-outer" class="seven wide column">
-                  <div id="svg-data-descrip">
+              <div id="svg-data-descrip-outer" class="scroll-svg-outer seven wide column">
+                  <div id="svg-data-descrip" class="scroll-svg-inner">
                     
                   </div>
                 
@@ -119,29 +119,44 @@
         
           <div id="academic-ident-scroll-container">
             
-            <div class="step text-scroll-div">
-              With the REGCAM05 report, we get 5 distinct academic identites to analyze: <b>Year</b>, <b>Gender</b>, <b>College</b>, <b>Department</b>, and <b>Major</b>.
+            <div id="academic-ident-intro" class="step text-scroll-div">
+              <p>With the REGCAM05 report, we get 5 distinct academic identites to analyze: <b>Year</b>, <b>Gender</b>, <b>College</b>, <b>Department</b>, and <b>Major</b>.</p>
             </div>
-            <div class="step text-scroll-div">
-              First: <b>Year</b>. Now, UCSD defines a student's "year" based on how many units they complete, wtih 36 units per year. So, Freshmen have completed between 0-35 academic units, Sophomores 36-71, and so on.<br/>
-              However, this doesn't coorespond to how many years a student has been at UCSD. Incoming first year freshmen (or transfers) with a lot of AP/IB credit or community college classes under their belt may have more than 36 units before they step foot on campus.
-              Also, not all students do 36 units per year. Some students do 20+ units per quarter, some students may take a quarter off, others might do summer classes. For example, I've only done two years at UCSD, but I have "Senior" academic standing, and I'm probably going to take 3 more years to graduate (meaning I'll be a "Senior" for three years).
+            <div id="academic-ident-year" class="step text-scroll-div">
+              <p>First: <b>Year</b>. Now, UCSD definition of "year" is not the same as intuition. They base it on the number of units complete. So, incoming first years with loads of AP credit can be "sophomores," while struggling third years can still be labelled "sophomores". For instance, I have completed two years at UCSD, but I'm labelled a "senior" (even when I have 2-3 more years to complete my degree).</p>
+              <br>
+              <p>For these reasons, Year is not analyzed much in this article.</p>
+              
+
             </div>
-            <div class="step text-scroll-div">
-              Next, <b>Gender</b>. One thing to note, UCSD only reports "Male" or "Female", and does not report any other gender identities.
+            <div id="academic-ident-gender" class="step text-scroll-div">
+              <p>Next, <b>Gender</b>. One thing to note, UCSD only reports "Male" or "Female", and does not report any other gender identities.</p>
             </div>
-            <div class="step text-scroll-div">
-              Then, <b>College.</b>. UC San Diego operates on a six-college system. I won't go too in depth with this, but a student's college is not based on their major or department, it is (ideally) independent from that.
+            <div id="academic-ident-college" class="step text-scroll-div">
+              <p>Then, <b>College</b>. UC San Diego operates on a six-college system. I won't go too in depth with this, but a student's college is not based on their major or department, it is (ideally) independent from that.</p>
             </div>
             
-            <div class="step text-scroll-div">
-              Finally, <b>Department</b> and <b>Major</b>. Just a small note, the data in this essay does not include double or triple majors (or minors, for that manner).
+            <div id="academic-ident-depart" class="step text-scroll-div">
+              <p>Finally, <b>Department</b> and <b>Major</b>. Just a small note, the data in this essay does not include double or triple majors (or minors, for that manner).</p>
             </div>
             
           </div>
           
         </div>
-        <div class="seven wide column">
+        <div id="svg-academic-ident-outer" class="scroll-svg-outer seven wide column">
+            <div id="svg-academic-ident" class="scroll-svg-inner">
+              <svg>
+                <g id="student-svg" transform="scale(.3)">
+                	<g>
+                		<g>
+                			<path d="M357.76,312.234c-3.28-7.848-11.178-12.873-18.713-15.963l-50.938-23.455l-24.473-20.639l-39.323,39.111h-0.03     l16.971,113.445c0.061,0.389-0.04,0.787-0.271,1.105l-17.744,24.283c-0.282,0.391-0.732,0.617-1.212,0.617     c-0.48,0-0.93-0.229-1.212-0.617l-17.742-24.283c-0.234-0.318-0.332-0.719-0.273-1.105l16.969-113.447h-0.026l-39.321-39.109     l-24.473,20.639l-50.941,23.455c-7.537,3.09-14.943,7.783-18.711,15.963c0,0-55.371,131.824-25.338,131.824h322.145     C413.132,444.061,357.76,312.234,357.76,312.234z"/>
+                			<path d="M361.298,131.489c0.767-0.083,1.457-0.449,1.932-1.042c0.481-0.592,0.698-1.355,0.613-2.114     c-0.57-4.869-1.143-9.728-1.708-14.597l-1.187-10.189c-0.181-1.521-1.542-2.627-3.074-2.49l-2.203,0.003l0.042-34.202     l1.153-0.419l3.845-1.388c3.256-1.178,5.424-4.265,5.424-7.724c0-3.46-2.168-6.548-5.424-7.727L224.819,0.49     c-1.807-0.653-3.783-0.653-5.586,0L83.339,49.6c-3.254,1.179-5.422,4.267-5.422,7.727c0,3.459,2.168,6.546,5.422,7.724     l50.236,18.155c-3.546,11.195-5.16,24.013-5.015,38.284c0.884,81.402,48.138,129.944,91.862,129.944     c43.213,0,90.979-48.542,91.859-129.944c0.146-13.832-1.379-26.291-4.697-37.238l36.528-13.2l0.077,30.021l-2.207-0.001     c-1.533-0.134-2.895,0.968-3.07,2.501l-2.857,24.788c-0.086,0.755,0.137,1.51,0.615,2.104c0.479,0.591,1.176,0.97,1.932,1.033      M220.428,231.666c-38.148,0-64.471-44.688-69.781-89.361c-4.91-41.314,54.838-43.237,58.308-17.63     c1.069,7.872-7.97,16.305-6.945,19.556c5.056,16.049,88.772-52.383,88.2-1.946C289.807,177.896,256.775,231.666,220.428,231.666z     "/>
+                		</g>
+                	</g>
+              </g>
+            </svg>
+
+            </div>
           
         </div>
       </div>
@@ -150,8 +165,90 @@
       </div>
     </div>
   
-  </div>
   
+    <div id="general" class="story scroll-section">
+      <div class="ui fluid accordion">
+        <div class="title">
+          <h2>UCSD in General</h2>
+        </div>
+        <div class="active content">
+          <div class="ui grid">
+            <div class="seven wide column">
+            
+              <div id="ucsd-general-scroll-container">
+                
+                <div id="ucsd-general-intro" class="step text-scroll-div">
+                  <p>Let's take a look on how UC San Diego has changed since Fall of 2007.</p>
+                </div>
+    
+                <div id="ucsd-general-size" class="step text-scroll-div">
+                  <p>The number of registered undergrad students has been steadily climbing since 2007, from 22,048 in Fall 2007 to 26,590 in 2015.</p>
+                </div>
+                <div id="ucsd-general-sizefall" class="step text-scroll-div">
+                  <p>You can see that every winter and spring quarter, the total number of students drop (probably attributed to graduations/dropout/study abroad). By filtering for just Fall quarter numbers, we get a better look of UCSD's growth.</p>
+                </div>
+                <div id="ucsd-general-growpercent" class="step text-scroll-div">
+                  <p>UCSD has grown XX% since 2007, and has been growing an average of X% per year since Fall XXX. </p>
+                </div>
+                <div id="ucsd-general-dropoff" class="step text-scroll-div">
+                  <p>As said before, UCSD loses an average of XXXX students between Fall and Spring quarter, or a X% drop. This means that lines at Santorini in PC go X% faster in spring compared to fall.</p>
+                </div>
+                <div id="ucsd-general-gender1" class="step text-scroll-div">
+                  <p>Currently, men are XX% of the undergrad student population of UCSD. This has not always been the case, however.</p>
+                </div>
+                <div id="ucsd-general-gender2" class="step text-scroll-div">
+                  <p>X years ago in XXXX, the number was flipped: women were xx% of the population. The male percentage of USD undergrads has steadily been rising - tying 50-50 in XXXX and rose to the xx% today. This is the exact opposite of most universities in the United States - women account of XX% of all college students.</p>
+                  <p>This can possibly be attributed to the explosion of male dominated majors at UCSD, which will be explored later.</p>
+                </div>
+                
+                
+              </div>
+              
+            </div>
+            <div id="svg-ucsd-general-outer" class="scroll-svg-outer seven wide column">
+                <div id="svg-ucsd-general" class="scroll-svg-inner">
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div id="colleges" class="story scroll-section">
+        <div class="ui fluid accordion">
+          <div class="title">
+            <h2>Six College System</h2>
+          </div>
+          <div class="active content">
+            <div class="ui grid">
+          <div class="seven wide column">
+          
+            <div id="ucsd-colleges-scroll-container">
+              
+              <div id="ucsd-colleges-intro" class="step text-scroll-div">
+                <p>Each college in UCSD six college system should be equal in representation and student makeup, but slight differences pop up when looked at closely.</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div id="svg-ucsd-colleges-outer" class="scroll-svg-outer seven wide column">
+              <div id="svg-ucsd-colleges" class="scroll-svg-inner">
+              </div>
+            
+          </div>
+        </div>
+          
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </div>
   <div id="endpadding" style="height:1000px;width:100%;">
     
   </div>
