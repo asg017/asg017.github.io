@@ -30,9 +30,9 @@
         padding: 0 30px;
       }
 
-      .slick-prev:before, 
+      .slick-prev:before,
       .slick-next:before {
-        color: black;    
+        color: black;
         z-index: 100000,
       }
     </style>
@@ -45,8 +45,8 @@
           </div>
           <div class="content">
             <div class="header">
-              {{ title }} 
-              {{#github}} 
+              {{ title }}
+              {{#github}}
                 <a href="{{ github }}"><i class="ui right floated large black github icon"></i></a>
               {{/github}}
             </div>
@@ -74,7 +74,7 @@
             <div class="five wide column">
               <h4 class="ui header">
                 <i class="ui {{ icon }} icon"></i>
-                {{ company }} 
+                {{ company }}
               </h4>
             </div>
             <div class="five wide column">
@@ -105,7 +105,7 @@
           company: 'Stripe',
           position: 'Software Engineering Intern',
           dates: [
-          {'start':'Jun 2018', 'end':'Sep 18'},
+          {'start':'Jun 2018', 'end':'Sep 2018'},
           ],
         },
         {
@@ -252,6 +252,16 @@
                 </div>
               </div>
             </div>
+
+            <div class="ui divider"></div>
+            <div class="item">
+              <div class="content">
+                <h2 class="ui header">My Timeline</h2>
+                <div id="timeline-target"></div>
+              </div>
+
+            </div>
+
             <div class="ui divider"></div>
             <div class="item">
               <div class="content">
@@ -260,8 +270,6 @@
                 <div id="work-container" style="margin:15px" class="ui items">
                 </div>
               </div>
-
-
 
             </div>
             <div class="ui divider"></div>
@@ -298,6 +306,27 @@
       <span style="color:white">Made with Github Pages</span>
     </div>
 
+    <script type="module">
+
+import {Runtime, Inspector} from "https://unpkg.com/@observablehq/notebook-runtime?module";
+
+import notebook from "https://api.observablehq.com/@asg017/personal-website.js?key=9693822663f0202c";
+
+Runtime.load(notebook, (cell) => {
+  if (cell.name === "timeline") {
+    return {
+      fulfilled: (value) => {
+        const timelineTarget = document.getElementById("timeline-target");
+        const d = value(timelineTarget.offsetWidth)
+        console.log(d)
+        window.d = d
+        timelineTarget.append(d.next().value)
+      }
+    };
+  }
+});
+
+    </script>
   </body>
 
 </html>
