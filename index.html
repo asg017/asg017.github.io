@@ -71,14 +71,15 @@
         <div class="content">
 
           <div class="ui grid">
+            
             <div class="five wide column">
+              <div class="description">{{ position }}</div>
+            </div>
+            <div style="text-align:center" class="five wide column">
               <h4 class="ui header">
                 <i class="ui {{ icon }} icon"></i>
                 {{ company }}
               </h4>
-            </div>
-            <div class="five wide column">
-              <div style="text-align:center" class="description">{{ position }}</div>
             </div>
             <div class="five wide column">
               {{#dates}}
@@ -116,6 +117,7 @@
           {'start':'Jun 2017', 'end':'Sep 2017'},
           ],
         },
+        {divider:true},
         {
           icon:'university',
           company: 'UC San Diego Admissions',
@@ -198,6 +200,13 @@
 
         var workTemplate = $('#template-work-experience').html();
         for(var i = 0; i < works.length; i++) {
+          if(works[i].divider) {
+            const div = document.createElement('div')
+            div.className = 'ui divider'
+            div.style.borderTop ='1px solid rgba(34,36,38,.01);'
+            $('#work-container').append(div);
+            continue;
+          }
           var html = Mustache.render(workTemplate, works[i]);
           $('#work-container').append(html);
         }
@@ -243,12 +252,19 @@
                   <span>UC San Diego 2019, Computer Engineering Major</span><br>
                   <span>Los Angeles, CA</span>
                 </div>
+                
 
-
+                <div class="description" style="margin:20px auto;">
+                  <p>
+                    Looking for SWE or data journalism internships/opportunites
+                    for Summer 2019! 
+                    <br/>Los Angeles preferred
+                  </p>
+                </div>
                 <div class="extra">
                   <div class="ui label">Web Dev</div>
                   <div class="ui label">Full Stack</div>
-                  <div class="ui label">Databases</div>
+                  <div class="ui label">Data Viz</div>
                 </div>
               </div>
             </div>
