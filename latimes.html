@@ -10,6 +10,8 @@
   Runtime.load(notebook, variable=>{
    if(variable.name === "App")
      return new Inspector(document.getElementById("notebook"));
+   else if(["styles", "fonts"].includes(variable.name))
+     return new Inspector(document.body.appendChild(document.createElement("div")));
   });
   </script>
 <style>
