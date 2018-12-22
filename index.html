@@ -350,8 +350,13 @@ Runtime.load(notebook, (cell) => {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-119341833-1');
+
+  // .cool?notrack=1
+  const params = new URLSearchParams(window.location.search);
+  if(params.has('notrack')){
+   window['ga-disable-UA-119341833-1'] = true; 
+  }
 </script>
 
   </body>
