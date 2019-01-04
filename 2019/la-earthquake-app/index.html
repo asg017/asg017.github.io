@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>ShakeCityLA - the new earthquake alert app for Los Angeles - is an untested app that consistently tracks your location</title>
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
-<body>
-<script type="module">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ShakeCityLA / Alex Garcia</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@observablehq/notebook-inspector@1/dist/notebook-inspector-style.css">
+    <meta property="og:title" content="The City of Los Angeles paid $300,000 for an untested, unreliable, and vulnerable earthquake alert app" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://iamprettydamn.cool/2019/la-earthquake-app" />
+    <meta property="og:image" content="https://iamprettydamn.cool/2019/la-earthquake-app/card.jpg" />
+  </head>
+  <body>
+    <script type="module">
 
 import {Inspector, Runtime} from "https://unpkg.com/@observablehq/notebook-runtime@1?module";
 import notebook from "./notebook.js";
 
 Runtime.load(notebook, Inspector.into(document.body));
 
-</script>
+    </script>
+  </body>
+</html>
