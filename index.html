@@ -9,23 +9,37 @@
       href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body>
     <style>
+      * {
+        box-sizing: inherit;
+      }
+      *:after {
+        box-sizing: inherit;
+      }
+      *:before {
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      body {
+        min-width: 477px;
+        margin: 0;
+      }
       h1 {
         margin: 0;
       }
       .projects pre {
         display: inline;
       }
-      body {
+      .container {
         margin-left: auto;
         margin-right: auto;
         max-width: 42rem;
         padding: 2.625rem 1.3125rem;
         min-height: 100vh;
       }
-      .container {
+      .header {
         display: grid;
         grid-template-columns: 120px auto;
         grid-gap: 1rem;
@@ -52,100 +66,106 @@
       }
 
       @media only screen and (max-width: 600px) {
-        .container {
+        .header {
           grid-template-columns: auto;
           text-align: center;
         }
         .pic {
-          width: 180px;
-        }
-        body {
-          margin: 2rem 1rem;
+          width: 150px;
         }
       }
     </style>
+  </head>
+  <body>
     <div class="container">
-      <div>
+      <div class="header">
         <div>
-          <image
-            class="pic"
-            src="https://avatars0.githubusercontent.com/u/15178711?v=4"
-          />
+          <div>
+            <image
+              class="pic"
+              src="https://avatars0.githubusercontent.com/u/15178711?v=4"
+            />
+          </div>
         </div>
-      </div>
-      <div>
-        <h1>Alex Garcia</h1>
         <div>
-          <p>
-            👋🏼 I'm a software engineer based in Los Angeles. I like working with
-            data, making Observable notebooks, and building developer tools.
-          </p>
-        </div>
-        <div class="links">
-          <a href="https://twitter.com/agarcia_me">Twitter</a> •
-          <a href="https://github.com/asg017">Github</a> •
-          <a href="https://observablehq.com/@asg017">Observable</a>
-        </div>
-        <div style="margin-top: 0.5rem">
-          <span>alexsebastian [dot] garcia [at] gmail [dot] com</span>
-        </div>
-      </div>
-    </div>
-    <div class="looking">
-      <div>
-        <h2 style="text-align: center">Looking for contract/freelance work!</h2>
-        <div style="margin: 1rem 3rem">
-          <p>
-            If your company, newsroom, or team is looking for someone to do
-            contract or full-time work on:
-          </p>
-          <ul>
-            <li>Building data visualizations</li>
-            <li>Tooling <i>around</i> data visualizations</li>
-            <li>Scraping, ETL processes, parsing messy data</li>
-          </ul>
-          <p>
-            Or anything that deals with Observable notebooks, Datasette,
-            Streamlit, or any of my projects listed below, feel free to DM me on
-            Twitter to email me at the address above!
-          </p>
+          <h1>Alex Garcia</h1>
+          <div>
+            <p>
+              👋🏼 I'm a software engineer based in Los Angeles. I like working
+              with data, making Observable notebooks, and building developer
+              tools.
+            </p>
+          </div>
+          <div class="links">
+            <a href="https://twitter.com/agarcia_me">Twitter</a> •
+            <a href="https://github.com/asg017">Github</a> •
+            <a href="https://observablehq.com/@asg017">Observable</a>
+          </div>
+          <div style="margin-top: 0.5rem">
+            <span>alexsebastian [dot] garcia [at] gmail [dot] com</span>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="looking">
+        <div>
+          <h2 style="text-align: center">
+            Looking for contract/freelance work!
+          </h2>
+          <div style="margin: 1rem 3rem">
+            <p>
+              If your company, newsroom, or team is looking for someone to do
+              contract or full-time work on:
+            </p>
+            <ul>
+              <li>Building data visualizations</li>
+              <li>Tooling <i>around</i> data visualizations</li>
+              <li>Scraping, ETL processes, parsing messy data</li>
+            </ul>
+            <p>
+              Or anything that deals with Observable notebooks, Datasette,
+              Streamlit, or any of my projects listed below, feel free to DM me
+              on Twitter to email me at the address above!
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <div class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <pre><a href="https://github.com/asg017/observable-prerender">observable-prerender</a></pre>
-          <span> - Pre-render Observable notebooks from the command line</span>
-        </li>
-        <li>
-          <pre><a href="https://github.com/asg017/streamlit-observable">streamlit-observable</a></pre>
-          <span> - Embed Observable notebooks into Streamlit apps</span>
-        </li>
-        <li>
-          <pre><a href="https://github.com/asg017/oak">oak</a></pre>
-          <span>
-            - A CLI tool for reproducible data workflows (a big
-            work-in-progress)</span
-          >
-        </li>
-      </ul>
-    </div>
-    <div>
-      <svg width="400" height="150">
-        <path
-          id="track"
-          d="M335 133C451 47.8 544.667 158.167 577 224C587.167 276.833 622.4 377.6 682 358C756.5 333.5 814.5 133 763.5 133C712.5 133 687.5 59.5 481.5 224C316.7 355.6 315.167 218.167 335 133Z"
-          stroke="none"
-          fill="none"
-          transform="translate(0, -30) scale(.5)"
-        />
-        <text font-weight="800" font-size="2rem">
-          <textPath id="train" href="#track">choo choo</textPath>
-        </text>
-      </svg>
+      <div class="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <pre><a href="https://github.com/asg017/observable-prerender">observable-prerender</a></pre>
+            <span>
+              - Pre-render Observable notebooks from the command line</span
+            >
+          </li>
+          <li>
+            <pre><a href="https://github.com/asg017/streamlit-observable">streamlit-observable</a></pre>
+            <span> - Embed Observable notebooks into Streamlit apps</span>
+          </li>
+          <li>
+            <pre><a href="https://github.com/asg017/oak">oak</a></pre>
+            <span>
+              - A CLI tool for reproducible data workflows (a big
+              work-in-progress)</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <svg width="400" height="150">
+          <path
+            id="track"
+            d="M335 133C451 47.8 544.667 158.167 577 224C587.167 276.833 622.4 377.6 682 358C756.5 333.5 814.5 133 763.5 133C712.5 133 687.5 59.5 481.5 224C316.7 355.6 315.167 218.167 335 133Z"
+            stroke="none"
+            fill="none"
+            transform="translate(-100, -30) scale(.5)"
+          />
+          <text font-weight="800" font-size="2rem">
+            <textPath id="train" href="#track">choo choo</textPath>
+          </text>
+        </svg>
+      </div>
     </div>
     <script>
       let i = 0;
