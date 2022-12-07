@@ -23,11 +23,14 @@
         box-sizing: border-box;
       }
       body {
-        min-width: 477px;
+        min-width: 500px;
         margin: 0;
       }
       h1 {
         margin: 0;
+      }
+      ul {
+        padding-inline-start: 1rem;
       }
       .projects pre {
         display: inline;
@@ -35,7 +38,7 @@
       .container {
         margin-left: auto;
         margin-right: auto;
-        max-width: 42rem;
+        max-width: 44rem;
         padding: 2.625rem 1.3125rem;
         min-height: 100vh;
       }
@@ -92,7 +95,7 @@
           <div>
             <p>
               👋🏼 I'm a software engineer based in Los Angeles. I like working
-              with data, making Observable notebooks, and building developer
+              with data, SQLite, Observable notebooks, and building developer
               tools.
             </p>
           </div>
@@ -112,29 +115,9 @@
       <div class="looking">
         <div>
           <h2 style="text-align: center">Open for contract/freelance work!</h2>
-          <div style="margin: 1rem 3rem">
-            <p>
-              If your company, newsroom, or team is looking for someone to do
-              contract or part-time work on:
-            </p>
-            <ul>
-              <li>Building data visualizations</li>
-              <li>Tooling <i>around</i> data visualizations</li>
-              <li>Scraping, ETL processes, parsing messy data</li>
-            </ul>
-            <p>
-              Or you're looking for advice, planning, or consulting for these
-              specific technologies:
-            </p>
-            <ul>
-              <li>Observable notebooks</li>
-              <li>SQLite and SQLite extensions</li>
-              <li>D3.js</li>
-              <li>DuckDB</li>
-            </ul>
-            <p>
-              Feel free to DM me on Twitter to email me at the address above!
-            </p>
+          <div style="margin: 1rem 3rem; text-align: center">
+            <a href="./work.html">See here</a> for my availability and more
+            info.
           </div>
         </div>
       </div>
@@ -143,9 +126,17 @@
         <h2>Projects</h2>
         <ul>
           <li>
-            <a href="https://buttondown.email/alexgarcia/">SQLite Blog</a> and
-            related projects:
+            <a href="https://buttondown.email/alexgarcia/">My SQLite blog</a>
+            and related projects:
             <ul>
+              <li>
+                <pre><a href="https://github.com/asg017/sqlite-loadable-rs">sqlite-loadable-rs</a></pre>
+                - A Rust framework for safe and performant SQLite extensions
+              </li>
+              <li>
+                <pre><a href="https://github.com/asg017/sqlite-xsv">sqlite-xsv</a></pre>
+                - Extension for quickly reading CSV files and blobs
+              </li>
               <li>
                 <pre><a href="https://github.com/asg017/sqlite-lines">sqlite-lines</a></pre>
                 - Extension for reading lines from a file
@@ -153,6 +144,10 @@
               <li>
                 <pre><a href="https://github.com/asg017/sqlite-html">sqlite-html</a></pre>
                 - Extension for querying HTML elements
+              </li>
+              <li>
+                <pre><a href="https://github.com/asg017/sqlite-http">sqlite-http</a></pre>
+                - Extension for making HTTP requests
               </li>
             </ul>
           </li>
