@@ -57,9 +57,19 @@
         width: 120px;
         border-radius: 50%;
       }
-      .looking {
+      .nicar23 {
         background-color: #fff3cd;
         border: 1px solid #ffecb5;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        font-family: Sanchez;
+      }
+      .nicar23 ul {
+        padding-inline-start: 0;
+      }
+      .looking {
+        background-color: #d4d4d4;
+        border: 1px solid #4d4d4d;
         border-radius: 0.5rem;
         margin-top: 1.5rem;
         font-family: Sanchez;
@@ -94,9 +104,9 @@
           <h1>Alex Garcia</h1>
           <div>
             <p>
-              👋🏼 I'm a software engineer based in Los Angeles. I like working
-              with data, SQLite, Observable notebooks, and building developer
-              tools.
+              👋🏼 I'm a software engineer based in Los Angeles. I like making
+              data visualizations, data pipelines, SQLite, Observable notebooks,
+              and building developer tools.
             </p>
           </div>
           <div class="links">
@@ -112,9 +122,43 @@
           </div>
         </div>
       </div>
+      <div class="nicar23">
+        <div>
+          <h2 style="text-align: center">
+            ⚡NICAR23 Lightning Talk Tipsheet⚡
+          </h2>
+          <div style="margin: 1rem 3rem">
+            <p style="text-align: center">
+              For the 5-minute
+              <i>"Three new file formats for your toolbox"</i> Lightning Talk.
+            </p>
+
+            <ul>
+              <li>
+                <a
+                  href="https://observablehq.com/@asg017/nicar23-lightning-talk-tipsheet-3-file-formats"
+                  target="_blank"
+                  >Tipsheet</a
+                >
+                with official websites, sources, and Python / R / JavaScript /
+                CLI tools recommendations
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/presentation/d/1pNYwd4_hKeYv-x_ah26qmfQaXIkwUgTgR8BhV3xhXD4/edit?usp=sharing"
+                  target="_blank"
+                  >Slides</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="looking">
         <div>
-          <h2 style="text-align: center">Open for contract/freelance work!</h2>
+          <h2 style="text-align: center">
+            I'm open for contract/freelance work!
+          </h2>
           <div style="margin: 1rem 3rem; text-align: center">
             <a href="./work.html">See here</a> for my availability and more
             info.
@@ -126,30 +170,34 @@
         <h2>Projects</h2>
         <ul>
           <li>
-            <a href="https://buttondown.email/alexgarcia/">My SQLite blog</a>
-            and related projects:
+            Several SQLite extensions, including:
             <ul>
               <li>
-                <pre><a href="https://github.com/asg017/sqlite-loadable-rs">sqlite-loadable-rs</a></pre>
-                - A Rust framework for safe and performant SQLite extensions
+                <pre><a href="https://github.com/asg017/sqlite-vss">sqlite-vss</a></pre>
+                - Efficient vector search, based on Faiss
               </li>
               <li>
                 <pre><a href="https://github.com/asg017/sqlite-xsv">sqlite-xsv</a></pre>
-                - Extension for quickly reading CSV files and blobs
+                - Quickly reading CSV files and blobs
               </li>
               <li>
-                <pre><a href="https://github.com/asg017/sqlite-lines">sqlite-lines</a></pre>
-                - Extension for reading lines from a file
-              </li>
-              <li>
-                <pre><a href="https://github.com/asg017/sqlite-html">sqlite-html</a></pre>
-                - Extension for querying HTML elements
+                <pre><a href="https://github.com/asg017/sqlite-regex">sqlite-regex</a></pre>
+                <pre>REGEXP</pre>
+                support and other regular expression functinos
               </li>
               <li>
                 <pre><a href="https://github.com/asg017/sqlite-http">sqlite-http</a></pre>
-                - Extension for making HTTP requests
+                - Making HTTP requests and querying responses
+              </li>
+              <li>
+                <pre><a href="https://github.com/asg017/sqlite-html">sqlite-html</a></pre>
+                - Querying and generating HTML elements
               </li>
             </ul>
+          </li>
+          <li>
+            <pre><a href="https://github.com/asg017/sqlite-loadable-rs">sqlite-loadable-rs</a></pre>
+            - A Rust framework for safe and performant SQLite extensions
           </li>
           <li>
             <pre><a href="https://github.com/asg017/dataflow">dataflow</a></pre>
